@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route,Routes } from "react-router-dom";
 import './App.css';
 import {Navbar} from './components/Navbar'
 import {Home} from './components/Home'
+import {Error} from './components/Error'
 import {Favoritelist} from './components/Favoritelist'
 import { GlobalProvider } from "./context/GlobalState";
 
@@ -16,6 +17,7 @@ const  App = () => {
             <Routes>
               <Route  path="/" element={<Home />} />
               <Route  path="/favorite" element={<Favoritelist />} />
+              <Route  path="*" element={<Error />} />
             </Routes>
           </div>
         </>

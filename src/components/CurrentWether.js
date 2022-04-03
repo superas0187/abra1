@@ -11,7 +11,7 @@ export const CurrentWether = ({keys, name, locationKey}) => {
         favoriteslist,
     } = useContext(GlobalContext);
     
-    // const API_KEY = process.env.REACT_APP_API_KEY
+    const API_KEY = 'TfflqvjViOHJchhlq9CgdrtVjT0Aaeki'
     
     
 
@@ -33,7 +33,7 @@ export const CurrentWether = ({keys, name, locationKey}) => {
 
     useEffect(() => {
         if(locationKey) {
-        fetch(`http://dataservice.accuweather.com/currentconditions/v1/${keys}?apikey=${process.env.API_KEY}`
+        fetch(`http://dataservice.accuweather.com/currentconditions/v1/${keys}?apikey=${API_KEY}`
         )
         .then(res => res.json())
         .then(res => setCityInfo(res.map(c => {

@@ -3,7 +3,7 @@ import {WetherDay } from './WetherDay'
 export const DayDeily = ({keys, locationKey}) => {
 
     const [weatherInfo, setWeatherInfo] = useState();
-    // const API_KEY = process.env.REACT_APP_API_KEY
+    const API_KEY = 'TfflqvjViOHJchhlq9CgdrtVjT0Aaeki'
     
 
     
@@ -32,7 +32,7 @@ export const DayDeily = ({keys, locationKey}) => {
         ];
 
         if(locationKey) {
-            fetch(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${keys}?apikey=${process.env.API_KEY}&metric=true`
+            fetch(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${keys}?apikey=${API_KEY}&metric=true`
             )
             .then(res => res.json())
             .then(res => {
