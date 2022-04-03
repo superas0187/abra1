@@ -10,7 +10,7 @@ export const Home = () => {
   const [query, setQuery] = useState('');
   const [locationKey, setLocationKey] = useState('');
   const  cityName  = location?.state?.data
-  const API_KEY = 'TfflqvjViOHJchhlq9CgdrtVjT0Aaeki'
+  const API_KEY = 'Enter your private key'
 
   useEffect(() => {
     if(cityName) {
@@ -23,7 +23,7 @@ export const Home = () => {
   
     useEffect(() => {
      
-        fetch(`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${query}`
+        fetch(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${query}`
         )
         .then(res => res.json())
         .then(res => res.map(k => setLocationKey({
